@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import MyFunction, { My1 } from './components/MyFunction';
+// import './index.css';
+
+function MyFuntion1(){
+
+const [y,setY]=useState(30);
+
+return <h1>The value of {y}</h1>
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <MyFuntion1 />
+    <MyFunction />
+
+    <My1 />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
